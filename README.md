@@ -12,6 +12,7 @@
 ![pyttsx3][pyttsx3-logo]
 ![Tkinter][tkinter-logo]
 ![OBS Studio][obs-logo]
+![VB_Cable][VB-Cable-logo]
 ![Docker][docker-logo]
 
 **Sistema de traducción de voz a voz en tiempo real con subtítulos en pantalla para videoconferencias multilingües.**
@@ -35,7 +36,33 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
 - Síntesis de audio traducido en los auriculares del usuario.
 - Subtítulo (texto original en inglés) sobreimpreso en la videollamada.
 
-[Volver al inicio](#indice)
+---
+
+## 🧰 Tecnologías utilizadas
+
+- 🎤 **Captura de micrófono del usuario**:
+  - Captura directa del micro de auriculares.
+  - Uso de herramientas como `VB-Cable` o `VoiceMeeter` para redirigir la señal.
+
+- 🔁 **Captura del audio del interlocutor**:
+  - Redirección mediante `VB-Audio Cable` o `VoiceMeeter` (captura de salida de sistema).
+  - Opción: uso de `pyaudio` o `sounddevice` para capturar desde Python.
+
+- 🧾 **Transcripción y traducción**:
+  - Motor STT: `Whisper` (openAI).
+  - Traducción automática: `DeepL API` o `LibreTranslate`.
+
+- 🔊 **Síntesis de voz para traducciones**:
+  - `pyttsx3` (offline), `gTTS` o `Coqui TTS`.
+
+- 🎥 **Visualización y emisión del vídeo con subtítulos**:
+  - `OBS Studio` como motor de vídeo.
+  - Subtítulos renderizados mediante **Browser Source** HTML (local o incrustado).
+  - Emisión a Google Meet o Microsoft Teams vía `OBS VirtualCam`.
+
+- 🖥️ **Visualización para el usuario (texto y audio)**:
+  - Traducción del interlocutor enviada a auriculares vía `VB-Cable`.
+  - Subtítulo mostrado en el pie del vídeo con OBS + Browser Source.
 
 ---
 
@@ -106,6 +133,7 @@ Licencia MIT
 [whisper-logo]: https://img.shields.io/badge/Whisper-000000?style=for-the-badge&logo=openai&logoColor=white
 [deepl-logo]: https://img.shields.io/badge/DeepL-0A83FF?style=for-the-badge&logo=deepl&logoColor=white
 [pyttsx3-logo]: https://img.shields.io/badge/pyttsx3-FF9900?style=for-the-badge&logo=python&logoColor=white
+[VB-Cable-logo]: https://img.shields.io/badge/VB-Cable-00ADEF?style=for-the-badge&logo=windows&logoColor=white
 
 <!-- GUI -->
 [tkinter-logo]: https://img.shields.io/badge/Tkinter-3776AB?style=for-the-badge&logo=python&logoColor=white
