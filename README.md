@@ -16,39 +16,56 @@
 
 **Sistema de traducción de voz a voz en tiempo real con subtítulos en pantalla para videoconferencias multilingües.**
 
+## 🧠 Descripción general
+
+**🎯 Objetivo:**  
+Facilitar la comunicación en reuniones internacionales **traduciendo y subtitulando en tiempo real** lo que dice cada interlocutor.
+
+### 📤 Emisión (usuario de la app):
+- Captura de la voz desde el micrófono del auricular.
+- Transcripción en tiempo real.
+- Traducción al inglés.
+- Síntesis de voz traducida e inyección en la videollamada.
+- Subtítulos (original + traducción) mostrados en ventana flotante.
+
+### 📥 Recepción (interlocutor en la videollamada):
+- Captura del audio recibido en la videollamada.
+- Transcripción en tiempo real.
+- Traducción al castellano.
+- Síntesis de audio traducido en los auriculares del usuario.
+- Subtítulo (texto original en inglés) sobreimpreso en la videollamada.
+
+[Volver al inicio](#indice)
+
+---
+
 ## 🚧 Estado del proyecto
 
-**Este proyecto está actualmente en desarrollo activo.**
-
-Es una herramienta experimental diseñada para:
-- Capturar tu voz en castellano (u otro idioma)
-- Transcribirla en tiempo real
-- Traducirla al inglés
-- Sintetizar la voz traducida
-- Mostrar el texto original y traducido en una ventana flotante
-- Opcionalmente proyectar la traducción en una videollamada mediante OBS
+**Este proyecto está actualmente en desarrollo activo.**  
+Fase inicial de prototipado con flujos de entrada/salida independientes, pruebas de latencia, buffers de sincronización y primeros experimentos con OBS.
 
 [Volver al inicio](#indice)
 
 ---
 
 ## 🔧 Tecnologías previstas
-- Python (audio, traducción, interfaz gráfica)
-- Reconocimiento de voz (ej. Whisper / Vosk)
-- API de traducción (ej. DeepL, LibreTranslate)
-- Motor TTS (ej. pyttsx3, gTTS, Coqui TTS)
+- Python (gestión de audio, lógica de traducción, GUI)
+- Reconocimiento de voz: Whisper, Vosk
+- API de traducción: DeepL, LibreTranslate
+- Síntesis TTS: pyttsx3, gTTS, Coqui TTS
 - GUI: Tkinter
 - OBS Studio (para proyección en videollamadas)
-- Docker (para contenedor desplegable)
+- Docker (contenedor autoejecutable)
 
 [Volver al inicio](#indice)
 
 ---
 
 ## 🚀 Casos de uso
-- Reuniones remotas con barreras de idioma
-- Asistencia en tiempo real para equipos bilingües
-- Traducción en vivo para ingenieros QA o desarrolladores en llamadas internacionales
+- Reuniones técnicas con desarrolladores internacionales
+- Equipos QA con perfiles técnicos y no técnicos en distintos idiomas
+- Tutorías, webinars o asistencia remota bilingüe
+- Apoyo a perfiles con nivel de inglés A2-B1 para participar en calls sin bloquearse
 
 [Volver al inicio](#indice)
 
@@ -56,7 +73,8 @@ Es una herramienta experimental diseñada para:
 
 ## 📦 Instalación (prevista)
 
-Se añadirán las instrucciones de instalación a medida que el proyecto avance.
+Se añadirán las instrucciones de instalación a medida que el proyecto avance.  
+Se prevé instalación local con Docker, configuración de API keys y dependencias vía `pip`.
 
 [Volver al inicio](#indice)
 
@@ -64,7 +82,8 @@ Se añadirán las instrucciones de instalación a medida que el proyecto avance.
 
 ## 🤝 Contribuciones
 
-No dudes en abrir issues o pull requests. Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras.
+No dudes en abrir issues o pull requests.  
+Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras: detección de pausas naturales, buffer de cola para frases no solapadas, control por atajos de teclado, etc.
 
 [Volver al inicio](#indice)
 
