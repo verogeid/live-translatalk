@@ -1,5 +1,5 @@
 <a id="indice"></a>
-![Status][En-Construccion]
+![Status][En-Diseno]
 
 [![LinkedIn][linkedin-logo]][linkedin-link] (C) Diego González Fernández. 
 ---
@@ -133,8 +133,8 @@ Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras: d
 <a id="estado-actual"></a>
 ## 🚧 Estado del proyecto
 
-**Este proyecto está actualmente en desarrollo activo.**  
-Fase inicial de prototipado con flujos de entrada/salida independientes, pruebas de latencia, buffers de sincronización y primeros experimentos con OBS.
+**Este proyecto se encuentra en fase de diseño.**  
+Se ha definido la arquitectura, los flujos de entrada/salida y las herramientas necesarias para el prototipo inicial. Aún no se ha comenzado el desarrollo.
 
 [Volver al inicio](#indice)
 
@@ -152,6 +152,7 @@ Licencia MIT
 
 <!-- Workspace -->
 [En-Construccion]: https://img.shields.io/badge/status-en%20construcci%C3%B3n-orange
+[En-Diseno]: https://img.shields.io/badge/status-en%20dise%C3%B1o-yellow
 
 <!-- Speech & Traducción -->
 [whisper-logo]: https://img.shields.io/badge/Whisper-000000?style=for-the-badge&logo=openai&logoColor=white
