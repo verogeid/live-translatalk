@@ -17,7 +17,21 @@
 
 **Sistema de traducción de voz a voz en tiempo real con subtítulos en pantalla para videoconferencias multilingües.**
 
-## 🧠 Descripción general
+---
+
+## 🧭 Índice
+
+- [🧠 Descripción del Proyecto](#descripcion-del-proyecto)
+- [🧰 Tecnologías utilizadas](#tecnologias)
+- [🔧 Tecnologías previstas](#tech-previstas)
+- [🚀 Casos de uso](#casos-de-uso)
+- [📦 Instalación](#instalacion)
+- [🤝 Contribuciones](#contribuciones)
+- [🚧 Estado del proyecto](#estado-actual)
+---
+
+<a id="descripcion-del-proyecto"></a>
+## 🧠 Descripción del Proyecto
 
 **🎯 Objetivo:**  
 Facilitar la comunicación en reuniones internacionales **traduciendo y subtitulando en tiempo real** lo que dice cada interlocutor.
@@ -36,8 +50,11 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
 - Síntesis de audio traducido en los auriculares del usuario.
 - Subtítulo (texto original en inglés) sobreimpreso en la videollamada.
 
+[Volver al inicio](#indice)
+
 ---
 
+<a id="tecnologias"></a>
 ## 🧰 Tecnologías utilizadas
 
 - 🎤 **Captura de micrófono del usuario**:
@@ -64,17 +81,11 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
   - Traducción del interlocutor enviada a auriculares vía `VB-Cable`.
   - Subtítulo mostrado en el pie del vídeo con OBS + Browser Source.
 
----
-
-## 🚧 Estado del proyecto
-
-**Este proyecto está actualmente en desarrollo activo.**  
-Fase inicial de prototipado con flujos de entrada/salida independientes, pruebas de latencia, buffers de sincronización y primeros experimentos con OBS.
-
 [Volver al inicio](#indice)
 
 ---
 
+<a id="tech-previstas"></a>
 ## 🔧 Tecnologías previstas
 - Python (gestión de audio, lógica de traducción, GUI)
 - Reconocimiento de voz: Whisper, Vosk
@@ -88,6 +99,7 @@ Fase inicial de prototipado con flujos de entrada/salida independientes, pruebas
 
 ---
 
+<a id="casos-de-uso"></a>
 ## 🚀 Casos de uso
 - Reuniones técnicas con desarrolladores internacionales
 - Equipos QA con perfiles técnicos y no técnicos en distintos idiomas
@@ -98,6 +110,7 @@ Fase inicial de prototipado con flujos de entrada/salida independientes, pruebas
 
 ---
 
+<a id="instalacion"></a>
 ## 📦 Instalación (prevista)
 
 Se añadirán las instrucciones de instalación a medida que el proyecto avance.  
@@ -107,10 +120,21 @@ Se prevé instalación local con Docker, configuración de API keys y dependenci
 
 ---
 
+<a id="contribuciones"></a>
 ## 🤝 Contribuciones
 
 No dudes en abrir issues o pull requests.  
 Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras: detección de pausas naturales, buffer de cola para frases no solapadas, control por atajos de teclado, etc.
+
+[Volver al inicio](#indice)
+
+---
+
+<a id="estado-actual"></a>
+## 🚧 Estado del proyecto
+
+**Este proyecto está actualmente en desarrollo activo.**  
+Fase inicial de prototipado con flujos de entrada/salida independientes, pruebas de latencia, buffers de sincronización y primeros experimentos con OBS.
 
 [Volver al inicio](#indice)
 
