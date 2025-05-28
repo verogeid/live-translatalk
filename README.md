@@ -133,8 +133,9 @@ Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras: d
 <a id="estado-actual"></a>
 ## 🚧 Estado del proyecto
 
-**Este proyecto se encuentra en fase de diseño.**  
-Se ha definido la arquitectura, los flujos de entrada/salida y las herramientas necesarias para el prototipo inicial. Aún no se ha comenzado el desarrollo.
+💬 Este repositorio está ***en pausa*** por falta de tiempo. La versión híbrida del sistema (más ligera, con fallback local si hay latencia) está implementada en un repo privado. No se ha hecho pública aún por falta de pruebas e instalación automatizada. El proyecto sigue vivo, pero priorizo otros con mayor impacto pedagógico o técnico.
+
+🔊 He esbozado una versión 2.0 que personaliza la voz sin aumentar la latencia. Analiza la voz del usuario con PyAudio y busca su correspondencia en una biblioteca de voces digitales gratuitas preexistentes, usando parámetros como longitud de onda y timbre. No clona la voz ni entrena modelos, pero mejora la percepción del usuario al oírse. A día de hoy no existe una base de datos pública con estos perfiles auditivos, pero el enfoque propone una solución viable y original.
 
 [Volver al inicio](#indice)
 
