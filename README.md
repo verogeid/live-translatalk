@@ -1,7 +1,7 @@
 <a id="indice"></a>
 ![Status][En-Diseno]
 
-[![LinkedIn][linkedin-logo]][linkedin-link] (C) Diego González Fernández. 
+[![LinkedIn][linkedin-logo]][linkedin-link] (C) Diego González Fernández  
 ---
 
 <h1 align="center">🎙️ live-translatalk 🎙️</h1>
@@ -15,7 +15,13 @@
 ![VB_Cable][VB-Cable-logo]
 ![Docker][docker-logo]
 
-**Sistema de traducción de voz a voz en tiempo real con subtítulos en pantalla para videoconferencias multilingües.**
+**Sistema real de traducción de voz a voz multilingüe para videollamadas con subtítulos integrados.**
+
+---
+
+> ⚠️ Este README no es solo una *idea bonita*: es una solución técnica en desarrollo.  
+> Ya existe una versión híbrida funcional.  
+> El código completo se encuentra en un repositorio privado a la espera de pruebas y setup automatizado.
 
 ---
 
@@ -28,27 +34,27 @@
 - [📦 Instalación](#instalacion)
 - [🤝 Contribuciones](#contribuciones)
 - [🚧 Estado del proyecto](#estado-actual)
+
 ---
 
 <a id="descripcion-del-proyecto"></a>
 ## 🧠 Descripción del Proyecto
 
 **🎯 Objetivo:**  
-Facilitar la comunicación en reuniones internacionales **traduciendo y subtitulando en tiempo real** lo que dice cada interlocutor.
+Traducir y subtitular en tiempo real lo que dice cada interlocutor en una videollamada internacional, sin depender de plataformas externas ni extensiones de navegador.
 
-### 📤 Emisión (usuario de la app):
-- Captura de la voz desde el micrófono del auricular.
-- Transcripción en tiempo real.
-- Traducción al inglés.
-- Síntesis de voz traducida e inyección en la videollamada.
-- Subtítulos (original + traducción) mostrados en ventana flotante.
+### 📤 Emisión (usuario):
+- Captura de voz desde auriculares
+- Transcripción en tiempo real (*Whisper*)
+- Traducción automática (*DeepL API*)
+- Voz sintética traducida enviada a la videollamada
+- Subtítulos sincronizados en pantalla (original + traducido)
 
-### 📥 Recepción (interlocutor en la videollamada):
-- Captura del audio recibido en la videollamada.
-- Transcripción en tiempo real.
-- Traducción al castellano.
-- Síntesis de audio traducido en los auriculares del usuario.
-- Subtítulo (texto original en inglés) sobreimpreso en la videollamada.
+### 📥 Recepción (interlocutor):
+- Captura de audio recibido (VB-Cable)
+- Transcripción y traducción
+- Voz traducida en auriculares del usuario
+- Subtítulos sobreimpresos en el vídeo
 
 [Volver al inicio](#indice)
 
@@ -57,29 +63,11 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
 <a id="tecnologias"></a>
 ## 🧰 Tecnologías utilizadas
 
-- 🎤 **Captura de micrófono del usuario**:
-  - Captura directa del micro de auriculares.
-  - Uso de herramientas como `VB-Cable` o `VoiceMeeter` para redirigir la señal.
-
-- 🔁 **Captura del audio del interlocutor**:
-  - Redirección mediante `VB-Audio Cable` o `VoiceMeeter` (captura de salida de sistema).
-  - Opción: uso de `pyaudio` o `sounddevice` para capturar desde Python.
-
-- 🧾 **Transcripción y traducción**:
-  - Motor STT: `Whisper` (openAI).
-  - Traducción automática: `DeepL API` o `LibreTranslate`.
-
-- 🔊 **Síntesis de voz para traducciones**:
-  - `pyttsx3` (offline), `gTTS` o `Coqui TTS`.
-
-- 🎥 **Visualización y emisión del vídeo con subtítulos**:
-  - `OBS Studio` como motor de vídeo.
-  - Subtítulos renderizados mediante **Browser Source** HTML (local o incrustado).
-  - Emisión a Google Meet o Microsoft Teams vía `OBS VirtualCam`.
-
-- 🖥️ **Visualización para el usuario (texto y audio)**:
-  - Traducción del interlocutor enviada a auriculares vía `VB-Cable`.
-  - Subtítulo mostrado en el pie del vídeo con OBS + Browser Source.
+- 🎤 **Audio de entrada**: VB-Cable, VoiceMeeter, PyAudio
+- 🧠 **STT y traducción**: *Whisper* (OpenAI), *DeepL API*
+- 🔊 **TTS**: pyttsx3, gTTS, Coqui TTS
+- 📺 **Visualización**: OBS Studio + Browser Source (HTML local)
+- 📦 **Ecosistema**: Python + Docker
 
 [Volver al inicio](#indice)
 
@@ -87,13 +75,13 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
 
 <a id="tech-previstas"></a>
 ## 🔧 Tecnologías previstas
-- Python (gestión de audio, lógica de traducción, GUI)
+
+- Backend: Python (captura, lógica, síntesis, traducción)
+- GUI: Tkinter
 - Reconocimiento de voz: Whisper, Vosk
 - API de traducción: DeepL, LibreTranslate
-- Síntesis TTS: pyttsx3, gTTS, Coqui TTS
-- GUI: Tkinter
-- OBS Studio (para proyección en videollamadas)
-- Docker (contenedor autoejecutable)
+- TTS: Coqui TTS, pyttsx3
+- Contenedorización: Docker
 
 [Volver al inicio](#indice)
 
@@ -101,10 +89,11 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
 
 <a id="casos-de-uso"></a>
 ## 🚀 Casos de uso
-- Reuniones técnicas con desarrolladores internacionales
-- Equipos QA con perfiles técnicos y no técnicos en distintos idiomas
-- Tutorías, webinars o asistencia remota bilingüe
-- Apoyo a perfiles con nivel de inglés A2-B1 para participar en calls sin bloquearse
+
+- QA o Devs con inglés limitado en *calls* técnicas
+- Tutores o formadores remotos en entornos bilingües
+- Soporte técnico o webinars multilingües
+- Entornos inclusivos donde no se espera fluidez oral
 
 [Volver al inicio](#indice)
 
@@ -113,8 +102,9 @@ Facilitar la comunicación en reuniones internacionales **traduciendo y subtitul
 <a id="instalacion"></a>
 ## 📦 Instalación (prevista)
 
-Se añadirán las instrucciones de instalación a medida que el proyecto avance.  
-Se prevé instalación local con Docker, configuración de API keys y dependencias vía `pip`.
+- Entorno Python local o contenedor Docker autoejecutable
+- Configuración mínima: claves de API + dependencias vía `pip`
+- Documentación futura incluirá guía paso a paso
 
 [Volver al inicio](#indice)
 
@@ -123,8 +113,11 @@ Se prevé instalación local con Docker, configuración de API keys y dependenci
 <a id="contribuciones"></a>
 ## 🤝 Contribuciones
 
-No dudes en abrir issues o pull requests.  
-Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras: detección de pausas naturales, buffer de cola para frases no solapadas, control por atajos de teclado, etc.
+Pull requests, ideas y sugerencias son bienvenidas.  
+Algunos retos abiertos:
+- Manejo de silencios y *overlapping*
+- Fallback en caso de alta latencia
+- Shortcuts para activar/desactivar traducción
 
 [Volver al inicio](#indice)
 
@@ -133,9 +126,10 @@ Este es un proyecto en fase prototipo, con mucho espacio para ideas y mejoras: d
 <a id="estado-actual"></a>
 ## 🚧 Estado del proyecto
 
-💬 Este repositorio está ***en pausa*** por falta de tiempo. La versión híbrida del sistema (más ligera, con fallback local si hay latencia) está implementada en un repo privado. No se ha hecho pública aún por falta de pruebas e instalación automatizada. El proyecto sigue vivo, pero priorizo otros con mayor impacto pedagógico o técnico.
-
-🔊 He esbozado una versión 2.0 que personaliza la voz sin aumentar la latencia. Analiza la voz del usuario con PyAudio y busca su correspondencia en una biblioteca de voces digitales gratuitas preexistentes, usando parámetros como longitud de onda y timbre. No clona la voz ni entrena modelos, pero mejora la percepción del usuario al oírse. A día de hoy no existe una base de datos pública con estos perfiles auditivos, pero el enfoque propone una solución viable y original.
+🚧 En pausa por otras prioridades.  
+🧪 El prototipo híbrido (local + remoto) está listo en privado.  
+🔉 Planificada versión 2.0 con selección automática de voz digital similar al timbre del usuario (sin clonación, sin IA propietaria).  
+💡 Idea: crear base pública de perfiles sonoros libres y seleccionables.
 
 [Volver al inicio](#indice)
 
